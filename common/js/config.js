@@ -1,8 +1,8 @@
 export default {
 	
     // #ifndef H5
-    //baseUrl:"http://wechat.dishait.cn",
-	baseUrl:"http://127.0.0.1:8090",
+    baseUrl:"https://humor.xiangchengshu.com",
+	//baseUrl:"http://127.0.0.1:8090",
     // #endif
 	
     // #ifdef H5
