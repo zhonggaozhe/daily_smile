@@ -11,9 +11,9 @@
 /* 9 */,
 /* 10 */,
 /* 11 */
-/*!******************************************************************************************************!*\
-  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/main.js?{"page":"pages%2Fhumor%2Fhumor"} ***!
-  \******************************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/main.js?{"page":"pages%2Fhumor%2Fhumor"} ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26,9 +26,9 @@ createPage(_humor.default);
 
 /***/ }),
 /* 12 */
-/*!***********************************************************************************!*\
-  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue ***!
-  \***********************************************************************************/
+/*!***************************************************************************************!*\
+  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66,9 +66,9 @@ component.options.__file = "pages/humor/humor.vue"
 
 /***/ }),
 /* 13 */
-/*!******************************************************************************************************************!*\
-  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue?vue&type=template&id=0988614e& ***!
-  \******************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue?vue&type=template&id=0988614e& ***!
+  \**********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87,9 +87,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 14 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue?vue&type=template&id=0988614e& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue?vue&type=template&id=0988614e& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -99,12 +99,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components = {
-  uniList: function() {
-    return __webpack_require__.e(/*! import() | components/uni-list/uni-list */ "components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/components/uni-list/uni-list.vue */ 78))
-  },
-  uniListItem: function() {
-    return __webpack_require__.e(/*! import() | components/uni-list-item/uni-list-item */ "components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/components/uni-list-item/uni-list-item.vue */ 85))
+var components
+try {
+  components = {
+    uniList: function() {
+      return __webpack_require__.e(/*! import() | components/uni-list/uni-list */ "components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/components/uni-list/uni-list.vue */ 38))
+    },
+    uniListItem: function() {
+      return __webpack_require__.e(/*! import() | components/uni-list-item/uni-list-item */ "components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/components/uni-list-item/uni-list-item.vue */ 45))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
   }
 }
 var render = function() {
@@ -120,9 +139,9 @@ render._withStripped = true
 
 /***/ }),
 /* 15 */
-/*!************************************************************************************************************!*\
-  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -135,15 +154,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 16 */
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
 
 
 
@@ -240,12 +258,11 @@ var _config = _interopRequireDefault(__webpack_require__(/*! @/common/js/config.
 //
 //
 //
-//
 var _default = { components: {}, data: function data() {return { loading: false, page: 1, options: { status: 'noMore' }, formData: { status: 'loading' // 加载状态
-      }, dataList: [], tipShow: false // 是否显示顶部提示框
-    };}, onLoad: function onLoad() {this.getPageData();}, methods: { /**
-                                                                      * 下拉刷新回调函数
-                                                                      */onPullDownRefresh: function onPullDownRefresh() {this.page--;this.tipShow = true;this.formData.status = 'more';console.info("下拉刷新回调函数");this.getPageData(); // this.$refs.udb.loadData({
+      }, dataList: [], tipShow: false, // 是否显示顶部提示框
+      rippleStyle: '' };}, onLoad: function onLoad() {this.getPageData();}, methods: { /**
+                                                                                        * 下拉刷新回调函数
+                                                                                        */onPullDownRefresh: function onPullDownRefresh() {this.page--;this.tipShow = true;this.formData.status = 'more';console.info("下拉刷新回调函数");this.getPageData(); // this.$refs.udb.loadData({
       // 	clear: true
       // }, () => {
       // 	this.tipShow = false
@@ -254,12 +271,29 @@ var _default = { components: {}, data: function data() {return { loading: false,
     }, /**
         * 上拉加载回调函数
         */onReachBottom: function onReachBottom() {console.info("上拉加载回调函数"); // this.$refs.udb.loadMore()
-      this.page++;uni.showNavigationBarLoading();this.getPageData();}, load: function load(data, ended) {console.log(data);console.log(ended);if (ended) {this.formData.status = 'noMore';}}, getPageData: function getPageData() {var _this = this;console.info("当前查询第" + this.page + " 页");_request.default.get('/humorList?page=' + this.page).then(function (res) {// alert(1)
+      this.page++;uni.showNavigationBarLoading();this.getPageData();}, load: function load(data, ended) {console.log(data);console.log(ended);if (ended) {this.formData.status = 'noMore';}}, getPageData: function getPageData() {var _this = this;console.info("当前查询第" + this.page + " 页");_request.default.get('/getXdData?pageNum=' + this.page).then(function (res) {// alert(1)
         // console.info(" 数据:" + res.data);
-        if (_this.page == 1) {_this.dataList = [];}
+        if (_this.page == 1) {
+          _this.dataList = [];
+        }
         _this.dataList = _this.dataList.concat(res.data);
         uni.hideNavigationBarLoading();
       });
+    },
+    onClickZan: function onClickZan(res) {
+      var that = this;
+      // var x = 100;
+      // var y = 100 + 85;
+      var x = res.touches[0].pageX;
+      var y = res.touches[0].pageY + 85;
+
+      //alert("x="+x)
+      this.rippleStyle = '';
+      setTimeout(function () {
+        //alert(4444)
+        that.rippleStyle = 'top:' + y + 'px;left:' + x +
+        'px;-webkit-animation: ripple 0.4s linear;animation:ripple 0.4s linear;';
+      }, 200);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
@@ -268,9 +302,9 @@ var _default = { components: {}, data: function data() {return { loading: false,
 /* 18 */,
 /* 19 */,
 /* 20 */
-/*!*********************************************************************************************************************!*\
-  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue?vue&type=style&index=0&lang=scss& ***!
-  \*********************************************************************************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue?vue&type=style&index=0&lang=scss& ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -283,9 +317,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 21 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/zhonggaozhe/Documents/HBuilderProjects/底部选项卡模板/pages/humor/humor.vue?vue&type=style&index=0&lang=scss& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/zhonggaozhe/Documents/HBuilderProjects/daily_smile/pages/humor/humor.vue?vue&type=style&index=0&lang=scss& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

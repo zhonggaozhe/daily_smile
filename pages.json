@@ -5,38 +5,20 @@
 			"path": "pages/humor/humor",
 			"style": {
 				"backgroundTextStyle":"dark",
-				"navigationBarTitleText": "幽默笑话"
+				"navigationBarTitleText": ""
 			}
 		},
 		{
 			"path": "pages/home/me",
 			"style": {
-				//"navigationBarTitleText": "我的"
+				"navigationBarTitleText": ""
 			}
 		},
 		{
-			"path": "pages/tabbar/tabbar-3/tabbar-3",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar/tabbar-4/tabbar-4",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar/tabbar-5/tabbar-5",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
-			"style": {}
+			"path":"pages/quanpingdianzan",
+			"style":{
+				"navigationBarTitleText": ""
+			}
 		}
 
 	],

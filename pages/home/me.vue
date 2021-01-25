@@ -1,154 +1,237 @@
 <template>
-	<!-- <view class="user-wrap">
-		<view class="setting iconfont icon31shezhi"></view>
-		
-	</view> -->
-	<view class="content">
-		<view class="info">
-			<image class="avatar" mode="aspectFill" :src="userInfo.headPicUrl"></image>
-			<view class="nickname">{{ userInfo.nickName }}</view>
+	<view>
+		<!-- <view class="head comm-center">
+			<image src="/static/img/user/avatar.jpg"></image>
+			<view class="name">兽人加鲁鲁</view>
+			<view class="remarks"> 每天都要笑一笑！</view>
+		</view> -->
+		<view class="head comm-center">
+			<open-data class="avatar" type="userAvatarUrl" default-avatar="http://image.xiangchengshu.com/images/heads/ia_600000017.png"></open-data>
+			<open-data class="nickname" type="userNickName"></open-data>
+			<view class="remarks"> 每天都要笑一笑！</view>
 		</view>
-		<MyProgress :nowD="80" :sumD="100" :content='"LV 20"' :contentColor='"rgba(3,144,252,1)"' :contentBacColor='"#ffffff"' :time="3000" :wid="280" :type='"linear"'></MyProgress>
+		<!-- <view class="home-menu">
+			<view class="row comm-center">
+				<view>￥0</view>
+				<view>余额</view>
+			</view>
+			<view class="row edge comm-center">
+				<view>0</view>
+				<view>积分</view>
+			</view>
+			<view class="row comm-center">
+				<view>Lv.1</view>
+				<view>等级</view>
+			</view>
+		</view> -->
+		<view class="list-menu">
+			<!-- <view class="row" v-for="(item,index) in listMenu" :key="index" @click="listMenuClick(index)">
+				<image :src="item.icon" mode="aspectFill"></image>
+				<text>{{item.name}}</text>
+				<u-icon name="arrow-right" color="#B6B6B6"></u-icon>
+			</view> -->
+
+			<view class="cell" v-for="(item,index) in listMenu" :key="index" @click="listMenuClick(index)">
+				<view class="left-icon comm-center">
+					<image :src="item.icon"></image>
+				</view>
+				<view class="txt">{{item.name}}</view>
+				<view class="right-icon comm-center">
+					<!-- <image src="/static/img/tabbar/guanzhuactive.png"></image> -->
+				</view>
+			</view>
+			<!-- <view class="cell" @click="listMenuClick">
+				<view class="left-icon comm-center">
+					<image src="/static/img/tabbar/homeactive.png"></image>
+				</view>
+				<view class="txt">浏览记录</view>
+				<view class="right-icon comm-center">
+					<image src="/static/other/youjiantou.png"></image>
+				</view>
+			</view> -->
+			<!-- <view class="cell">
+				<view class="left-icon comm-center">
+					<image src="/static/other/10.png"></image>
+				</view>
+				<view class="txt">我的便便</view>
+				<view class="right-icon comm-center">
+					<image src="/static/other/youjiantou.png"></image>
+				</view>
+			</view> -->
+			<!-- <view class="cell">
+				<view class="left-icon comm-center">
+					<image src="/static/other/1.png"></image>
+				</view>
+				<view class="txt">我的帅气</view>
+				<view class="right-icon comm-center">
+					<image src="/static/other/youjiantou.png"></image>
+				</view>
+			</view> -->
+		</view>
 	</view>
 </template>
 
 <script>
-	import MyProgress from "@/components/my-progress.vue"
 	export default {
-		components: {
-			MyProgress
-		},
 		data() {
 			return {
-				title: 'Hello',
-				userInfo: {
-					headPicUrl: '/static/img/user/avatar.jpg',
-					nickName: '史蒂芬.林'
-				}
+				listMenu: [{
+						name: '我的收藏',
+						icon: '/static/img/tabbar/guanzhuactive.png',
+						url: '/pages/quanpingdianzan'
+					},
+					{
+						name: '浏览记录',
+						icon: '/static/img/tabbar/homeactive.png',
+						url: '/pages/quanpingdianzan'
+					}
+				]
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
-
+			//列表菜单点击
+			listMenuClick(index) {
+				//alert(this.listMenu[index].url)
+				uni.navigateTo({
+					url: this.listMenu[index].url
+				})
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
-page {
-	background: #f2f2f2;
-}
-.btn-hover {
-	background: #f2f2f2 !important;
-}
-.user {
-	.user-wrap {
+	page {
+		background-color: #f8f8f8;
+	}
+
+	.head {
+		height: 370rpx;
+		flex-direction: column;
+		background-color: #ffff0a;
+		color: #800080;
+
+		image {
+			width: 150rpx;
+			height: 150rpx;
+			border: 5rpx solid #FFFFFF;
+			border-radius: 100%;
+		}
+
+		.name {
+			padding-top: 30rpx;
+			font-size: 30rpx;
+		}
+
+		.remarks {
+			padding-top: 15rpx;
+			font-size: 24rpx;
+		}
+
+		.avatar {
+			height: 120rpx;
+			width: 120rpx;
+			background-size: 100%;
+			border: 5rpx solid #FFFFFF;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		.nickname {
+			color: #000000;
+			padding-top: 10rpx;
+			font-size: 30rpx;
+			font-family: KaiTi;
+		}
+	}
+
+	.avatar_box {
+		position: fixed;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 50vw;
-		padding: 30rpx;
-		z-index: 9;
-		border-radius: 0 0 20% 20%;
-		background: url('https://handsel.oss-cn-shenzhen.aliyuncs.com/1588938371592.jpg') no-repeat;
-		background-size: cover;
-		.setting {
-			color: #fff;
-			position: absolute;
-			top: 60rpx;
-			left: 60rpx;
-			font-size: 50rpx;
+		flex-direction: column;
+		//top: 80rpx;
+		left: 275rpx;
+		width: 200rpx;
+		height: 400rpx;
+
+		.avatar {
+			height: 120rpx;
+			width: 120rpx;
+			background-size: 100%;
+			border: 5rpx solid #FFFFFF;
+			border-radius: 50%;
+			overflow: hidden;
 		}
-		.info {
-			position: absolute;
-			text-align: center;
-			.avatar {
-				width: 150rpx;
-				height: 150rpx;
-				border-radius: 50%;
+
+		.nickname {
+			color: #FFFFFF;
+			padding-top: 10rpx;
+			font-size: 34rpx;
+			font-family: KaiTi;
+		}
+
+	}
+
+	.home-menu {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 20rpx 0;
+		height: 180rpx;
+		border-radius: 5rpx;
+		background-color: #FFFFFF;
+
+		.row {
+			width: 30%;
+			font-size: 28rpx;
+			font-weight: bold;
+			flex-direction: column;
+
+			view {
+				line-height: 50rpx;
 			}
-			.nickname {
-				color: #fff;
-				font-size: 28rpx;
-			}
+		}
+
+		.edge {
+			border-left: 5rpx solid #f1f1f1;
+			border-right: 5rpx solid #f1f1f1;
 		}
 	}
-	.order-status {
-		padding: 0 20rpx;
-		margin-top: -10vw;
-		.status-wrap {
-			border-radius: 25rpx;
-			overflow: hidden;
-			.status-list {
-				display: flex;
-				justify-content: space-evenly;
-				align-items: center;
-				background: #fff;
-				padding-top: 30rpx;
-				padding-bottom: 30rpx;
-				.status-item {
-					flex: 1;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-					.item-icon {
-						line-height: 1;
-						font-size: 65rpx;
-						color: #bbb;
-					}
-					.item-text {
-						font-size: 28rpx;
-						color: #666;
-						margin-top: 5rpx;
-					}
+
+	.list-menu {
+		background-color: #FFFFFF;
+
+		.cell {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 100rpx;
+			border-top: 5rpx solid #f8f8f8;
+
+			.left-icon {
+				width: 15%;
+
+				image {
+					width: 40rpx;
+					height: 40rpx;
+				}
+			}
+
+			.txt {
+				width: 80%;
+				font-size: 26rpx;
+			}
+
+			.right-icon {
+				width: 10%;
+
+				image {
+					width: 30rpx;
+					height: 30rpx;
 				}
 			}
 		}
 	}
-	.com-item {
-		padding-left: 20rpx;
-		padding-right: 20rpx;
-		margin-top: 20rpx;
-		.com-wrap {
-			border-radius: 25rpx;
-			overflow: hidden;
-		}
-	}
-	.cell {
-		height: 80rpx;
-		padding-left: 20rpx;
-		padding-right: 20rpx;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background: #fff;
-		border-bottom: 1px solid #f8f8f8;
-		&:active {
-			background: #f2f2f2;
-		}
-		&:last-child {
-			border-bottom: none !important;
-		}
-		.cell-left {
-			display: flex;
-			align-items: center;
-			.cell-icon {
-				width: 50rpx;
-				height: 50rpx;
-			}
-			.cell-text {
-				color: #666;
-				font-size: 28rpx;
-				margin-left: 20rpx;
-			}
-		}
-		.iconfont {
-			font-size: 40rpx;
-			color: #999;
-		}
-	}
-}
 </style>

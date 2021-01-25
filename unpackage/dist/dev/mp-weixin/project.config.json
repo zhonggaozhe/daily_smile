@@ -4,12 +4,15 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
-  "projectname": "底部选项卡模板",
+  "appid": "wxd1f98b02322c7270",
+  "projectname": "哈哈哈",
   "condition": {
     "search": {
       "current": -1,

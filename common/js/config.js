@@ -6,7 +6,7 @@ export default {
     // #endif
 	
     // #ifdef H5
-    baseUrl:"http://127.0.0.1:8090",
+    baseUrl:"https://humor.xiangchengshu.com",
     // #endif
     //socketUrl:"ws://wechat.dishait.cn/ws",
     socketUrl:"ws://doctorfss.com:9326",

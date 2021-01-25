@@ -34,8 +34,7 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
           flex-direction: row;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .uni-flex-column, .uni-content {
   -webkit-box-orient: vertical;
@@ -84,8 +83,7 @@
   margin-right: 20rpx;
   width: 125px;
   height: 75px;
-  -webkit-border-radius: 12rpx;
-          border-radius: 12rpx;
+  border-radius: 12rpx;
   overflow: hidden;
   border: 1px #f5f5f5 solid;
 }
@@ -94,8 +92,7 @@
   height: 100%;
 }
 .uni-media-box {
-  -webkit-border-radius: 12rpx;
-          border-radius: 12rpx;
+  border-radius: 12rpx;
   overflow: hidden;
 }
 .uni-media-box .uni-thumb {
@@ -104,8 +101,7 @@
   -webkit-flex-shrink: 1;
           flex-shrink: 1;
   width: 33%;
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
 .uni-media-box .uni-thumb:first-child {
   margin: 0;
@@ -135,8 +131,7 @@
   padding: 0 5px;
   border: 1px #c8c7cc solid;
   margin-right: 10px;
-  -webkit-border-radius: 6rpx;
-          border-radius: 6rpx;
+  border-radius: 6rpx;
   background: #f8f8f8;
   color: #333;
   font-size: 24rpx;
@@ -155,8 +150,7 @@ page {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #efeff4;
   min-height: 60%;
   height: auto;
@@ -210,5 +204,39 @@ page {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.ripple {
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: -90px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  overflow: hidden;
+  z-index: 1;
+}
+.img {
+  z-index: 2;
+  width: 50rpx;
+  height: 50rpx;
+}
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  padding-top: 100rpx;
+  font-size: 30rpx;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+@-webkit-keyframes ripple {
+100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+}
 }
 

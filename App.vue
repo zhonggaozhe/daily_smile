@@ -24,4 +24,22 @@ export default {
 
 <style>
 /*每个页面公共css */ 
+/*每个页面公共css */
+	@import 'common/zwyCss.css';
+
+	.comm-content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	
+	.comm-center{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 </style>

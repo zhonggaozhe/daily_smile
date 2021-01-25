@@ -24,4 +24,801 @@
 
 
 /*每个页面公共css */ 
+/*每个页面公共css */ 
+/*
+	在App.vue全局引入common文件夹下的zwyCss.css
+	为你想要效果的view添加class  ||  hover-class
+*/
+.zwyHeight {
+	position: relative;
+	overflow: hidden;
+}
+.zwyHeight::before {
+	content: '';
+	position: absolute;
+	background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+	background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+	width: 140%;
+	height: 80rpx;
+	left: 140%;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	-webkit-transform: rotateZ(-45deg);
+	        transform: rotateZ(-45deg);
+	-webkit-animation: isLeft 5s 2.3s infinite;
+	        animation: isLeft 5s 2.3s infinite;
+}
+@-webkit-keyframes isLeft {
+0% {
+		left: -140%;
+}
+12% {
+		left: 140%;
+}
+100% {
+		left: 140%;
+}
+}
+@keyframes isLeft {
+0% {
+		left: -140%;
+}
+12% {
+		left: 140%;
+}
+100% {
+		left: 140%;
+}
+} 
+/* 
+	<view wx:for="{{3}}" style="animation-delay:{{index+'s'}}" class="zwyChevron" key="{{index}}" ></view>
+*/
+.zwyChevron {
+	position: absolute;
+	width: 14px;
+	height: 4px;
+	opacity: 0;
+	-webkit-transform: scale3d(0.5, 0.5, 0.5);
+	        transform: scale3d(0.5, 0.5, 0.5);
+	-webkit-animation: move 3s ease-out infinite;
+	        animation: move 3s ease-out infinite;
+}
+.zwyChevron:before,
+.zwyChevron:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	margin: auto;
+	height: 100%;
+	width: 51%;
+	background: #fff;
+}
+.zwyChevron:before {
+	left: 0;
+	-webkit-transform: skew(0deg, 30deg);
+	        transform: skew(0deg, 30deg);
+}
+.zwyChevron:after {
+	right: 0;
+	width: 50%;
+	-webkit-transform: skew(0deg, -30deg);
+	        transform: skew(0deg, -30deg);
+}
+@-webkit-keyframes move {
+25% {
+		opacity: 1;
+}
+33% {
+		opacity: 1;
+		-webkit-transform: translateY(30px);
+		        transform: translateY(30px);
+}
+67% {
+		opacity: 1;
+		-webkit-transform: translateY(40px);
+		        transform: translateY(40px);
+}
+100% {
+		opacity: 0;
+		-webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+		        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+}
+}
+@keyframes move {
+25% {
+		opacity: 1;
+}
+33% {
+		opacity: 1;
+		-webkit-transform: translateY(30px);
+		        transform: translateY(30px);
+}
+67% {
+		opacity: 1;
+		-webkit-transform: translateY(40px);
+		        transform: translateY(40px);
+}
+100% {
+		opacity: 0;
+		-webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+		        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+}
+}
+@-webkit-keyframes shockwave {
+0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		box-shadow: 0 0 2px var(--color), inset 0 0 1px var(--color);
+		opacity: 1;
+}
+95% {
+		box-shadow: 0 0 50px var(--color), inset 0 0 30px var(--color);
+		opacity: 0;
+}
+100% {
+		-webkit-transform: scale(2.25);
+		transform: scale(2.25);
+		opacity: 0;
+}
+}
+@keyframes shockwave {
+0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		box-shadow: 0 0 2px var(--color), inset 0 0 1px var(--color);
+		opacity: 1;
+}
+95% {
+		box-shadow: 0 0 50px var(--color), inset 0 0 30px var(--color);
+		opacity: 0;
+}
+100% {
+		-webkit-transform: scale(2.25);
+		transform: scale(2.25);
+		opacity: 0;
+}
+}
+.zwyHot {
+	position: relative;
+	--color:rgba(0, 0, 0, 0.15);
+}
+.zwyHot::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	-webkit-animation: shockwave 3s 0.5s ease-out infinite;
+	        animation: shockwave 3s 0.5s ease-out infinite;
+}
+.zwyHot::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	-webkit-animation: shockwave 3s 0.65s ease-out infinite;
+	        animation: shockwave 3s 0.65s ease-out infinite;
+}
+@-webkit-keyframes zwyHover1 {
+0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+50% {
+		-webkit-transform: scale(0.9);
+		        transform: scale(0.9);
+}
+100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+}
+@keyframes zwyHover1 {
+0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+50% {
+		-webkit-transform: scale(0.9);
+		        transform: scale(0.9);
+}
+100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+}
+.zwyHover1 {
+	--count:infinite;
+	-webkit-animation: zwyHover1 .3s var(--count) !important;
+	        animation: zwyHover1 .3s var(--count) !important;
+}
+.zwyShake {
+	-webkit-transform-origin: center bottom;
+	        transform-origin: center bottom;
+	-webkit-animation: zwyShake 2s 0.5s ease-out infinite;
+	        animation: zwyShake 2s 0.5s ease-out infinite;
+}
+@-webkit-keyframes zwyShake {
+0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+10% {
+		-webkit-transform: rotate(-12deg);
+		        transform: rotate(-12deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+20% {
+		-webkit-transform: rotate(12deg);
+		        transform: rotate(12deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+28% {
+		-webkit-transform: rotate(-10deg);
+		        transform: rotate(-10deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+36% {
+		-webkit-transform: rotate(10deg);
+		        transform: rotate(10deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+42% {
+		-webkit-transform: rotate(-8deg);
+		        transform: rotate(-8deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+48% {
+		-webkit-transform: rotate(8deg);
+		        transform: rotate(8deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+52% {
+		-webkit-transform: rotate(-4deg);
+		        transform: rotate(-4deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+56% {
+		-webkit-transform: rotate(4deg);
+		        transform: rotate(4deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+60% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+100% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+}
+@keyframes zwyShake {
+0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+10% {
+		-webkit-transform: rotate(-12deg);
+		        transform: rotate(-12deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+20% {
+		-webkit-transform: rotate(12deg);
+		        transform: rotate(12deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+28% {
+		-webkit-transform: rotate(-10deg);
+		        transform: rotate(-10deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+36% {
+		-webkit-transform: rotate(10deg);
+		        transform: rotate(10deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+42% {
+		-webkit-transform: rotate(-8deg);
+		        transform: rotate(-8deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+48% {
+		-webkit-transform: rotate(8deg);
+		        transform: rotate(8deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+52% {
+		-webkit-transform: rotate(-4deg);
+		        transform: rotate(-4deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+56% {
+		-webkit-transform: rotate(4deg);
+		        transform: rotate(4deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+60% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+		        transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+}
+100% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+		        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+}
+}
+.zwyHover2 {
+	border-radius: 100%;
+	z-index: 999;
+	position: relative;
+	--color:#ff0081;
+	--count:infinite;
+}
+.zwyHover2::before,
+.zwyHover2::after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 140%;
+	height: 100%;
+	left: -20%;
+	z-index: -1000;
+	-webkit-transition: all ease-in-out 0.5s;
+	transition: all ease-in-out 0.5s;
+	background-repeat: no-repeat;
+}
+.zwyHover2::before {
+	top: -55%;
+	background-image: -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, transparent 20%, var(--color) 20%, transparent 30%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, transparent 10%, var(--color) 15%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%);
+	background-image: radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--color) 20%, transparent 30%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--color) 15%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%);
+	background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+	-webkit-animation: topBubbles ease-in-out 0.75s var(--count);
+	        animation: topBubbles ease-in-out 0.75s var(--count);
+	display: block;
+}
+.zwyHover2::after {
+	bottom: -55%;
+	background-image: -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, transparent 10%, var(--color) 15%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%), -webkit-radial-gradient(circle, var(--color) 20%, transparent 20%);
+	background-image: radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--color) 15%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%);
+	background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+	display: block;
+	-webkit-animation: bottomBubbles ease-in-out 0.75s var(--count);
+	        animation: bottomBubbles ease-in-out 0.75s var(--count);
+}
+@-webkit-keyframes topBubbles {
+0% {
+		background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+50% {
+		background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+100%{
+		background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+}
+}
+@keyframes topBubbles {
+0% {
+		background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+50% {
+		background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+100%{
+		background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+}
+}
+@-webkit-keyframes bottomBubbles {
+0% {
+		background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+50% {
+		background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+100%{
+		background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+}
+}
+@keyframes bottomBubbles {
+0% {
+		background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+50% {
+		background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+100%{
+		background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+}
+}
+@-webkit-keyframes zwyHover3 {
+0% {
+		-webkit-transform: scale(1, 1);
+		        transform: scale(1, 1);
+}
+33% {
+		-webkit-transform: scale(1, 1.2);
+		        transform: scale(1, 1.2);
+}
+66% {
+		-webkit-transform: scale(1.2, 1);
+		        transform: scale(1.2, 1);
+}
+100% {
+		-webkit-transform: scale(1, 1);
+		        transform: scale(1, 1);
+}
+}
+@keyframes zwyHover3 {
+0% {
+		-webkit-transform: scale(1, 1);
+		        transform: scale(1, 1);
+}
+33% {
+		-webkit-transform: scale(1, 1.2);
+		        transform: scale(1, 1.2);
+}
+66% {
+		-webkit-transform: scale(1.2, 1);
+		        transform: scale(1.2, 1);
+}
+100% {
+		-webkit-transform: scale(1, 1);
+		        transform: scale(1, 1);
+}
+}
+.zwyHover3 {
+	--count:infinite;
+	-webkit-animation: zwyHover3 .3s var(--count) !important;
+	        animation: zwyHover3 .3s var(--count) !important;
+}
+.zwyFly {
+	-webkit-animation: zwyFly 2s infinite alternate !important;
+	        animation: zwyFly 2s infinite alternate !important;
+}
+@-webkit-keyframes zwyFly {
+100% {
+		-webkit-transform: translateY(12%);
+		        transform: translateY(12%);
+}
+}
+@keyframes zwyFly {
+100% {
+		-webkit-transform: translateY(12%);
+		        transform: translateY(12%);
+}
+}
+.zwyHover4{
+	border-bottom: 6rpx #F6BE3C solid;
+}
+.zwyHover4:hover{
+	margin-top: 6rpx;
+	border-bottom: 0rpx #F6BE3C solid;
+}
+.zwyRotate{
+	-webkit-animation-name: zwyRotate;
+	        animation-name: zwyRotate;
+	-webkit-animation-duration: 10s;
+	        animation-duration: 10s;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+@-webkit-keyframes zwyRotate{
+0% {
+	    -webkit-transform: rotate(0deg);
+	            transform: rotate(0deg);
+}
+100% {
+	    -webkit-transform: rotate(1turn);
+	            transform: rotate(1turn);
+}
+0% {
+	    -webkit-transform: rotate(0deg);
+	            transform: rotate(0deg);
+}
+100% {
+	    -webkit-transform: rotate(1turn);
+	            transform: rotate(1turn);
+}
+}
+@keyframes zwyRotate{
+0% {
+	    -webkit-transform: rotate(0deg);
+	            transform: rotate(0deg);
+}
+100% {
+	    -webkit-transform: rotate(1turn);
+	            transform: rotate(1turn);
+}
+0% {
+	    -webkit-transform: rotate(0deg);
+	            transform: rotate(0deg);
+}
+100% {
+	    -webkit-transform: rotate(1turn);
+	            transform: rotate(1turn);
+}
+}
+.zwyLive{
+	width: 10%;
+	height: 50%;
+	position: relative;
+	--color:white;
+	background-color: var(--color);
+	-webkit-transform-origin: bottom;
+	        transform-origin: bottom;
+	-webkit-animation: zwyLive 0.6s 0.2s infinite ease-in-out;
+	        animation: zwyLive 0.6s 0.2s infinite ease-in-out;
+}
+.zwyLive::after{
+	right: 200%;
+	-webkit-animation: zwyLive 0.6s 0.4s infinite ease-in-out;
+	        animation: zwyLive 0.6s 0.4s infinite ease-in-out;
+}
+.zwyLive::before{
+	left: 200%;
+	-webkit-animation: zwyLive 0.6s 0s infinite ease-in-out;
+	        animation: zwyLive 0.6s 0s infinite ease-in-out;
+}
+.zwyLive::after,.zwyLive::before{
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	background-color: var(--color);
+	-webkit-transform-origin: bottom;
+	        transform-origin: bottom;
+}
+@-webkit-keyframes zwyLive {
+0%,100% {
+		-webkit-transform:scaleY(1);
+		        transform:scaleY(1);
+}
+50% {
+	    -webkit-transform: scaleY(0.6);
+	            transform: scaleY(0.6);
+}
+}
+@keyframes zwyLive {
+0%,100% {
+		-webkit-transform:scaleY(1);
+		        transform:scaleY(1);
+}
+50% {
+	    -webkit-transform: scaleY(0.6);
+	            transform: scaleY(0.6);
+}
+}
+.zwyMusic{
+	position: relative;
+	--contentBefore:'♫';
+	--contentAfter:'♩';
+}
+.zwyMusic::after,.zwyMusic::before{
+	position: absolute;
+	left: -10%;
+	bottom: -30%;
+	color: #000000;
+	opacity: 0;
+	-webkit-transform:translateY(0) translateX(0) scale(0);
+	        transform:translateY(0) translateX(0) scale(0);
+}
+.zwyMusic::after{
+	content: var(--contentAfter);
+	-webkit-animation:zwyMusic 2.5s 1.25s linear infinite ;
+	        animation:zwyMusic 2.5s 1.25s linear infinite ;
+}
+.zwyMusic::before{
+	content: var(--contentBefore);
+	-webkit-animation:zwyMusic 2.5s linear infinite ;
+	        animation:zwyMusic 2.5s linear infinite ;
+}
+@-webkit-keyframes zwyMusic{
+0%,100%{
+	    -webkit-transform:translateY(0) translateX(0) scale(0);
+	            transform:translateY(0) translateX(0) scale(0);
+	    opacity: 0;
+}
+1% {
+	    -webkit-transform:translateY(0) translateX(0) scale(.6);
+	            transform:translateY(0) translateX(0) scale(.6);
+	    opacity: 1;
+}
+50% {
+	    -webkit-transform: translateX(-40rpx) translateY(-50rpx) scale(1);
+	            transform: translateX(-40rpx) translateY(-50rpx) scale(1);
+	    opacity: 1;
+}
+95% {
+	    -webkit-transform: translateX(-50rpx) translateY(-100rpx) scale(1);
+	            transform: translateX(-50rpx) translateY(-100rpx) scale(1);
+	    opacity: 0;
+}
+}
+@keyframes zwyMusic{
+0%,100%{
+	    -webkit-transform:translateY(0) translateX(0) scale(0);
+	            transform:translateY(0) translateX(0) scale(0);
+	    opacity: 0;
+}
+1% {
+	    -webkit-transform:translateY(0) translateX(0) scale(.6);
+	            transform:translateY(0) translateX(0) scale(.6);
+	    opacity: 1;
+}
+50% {
+	    -webkit-transform: translateX(-40rpx) translateY(-50rpx) scale(1);
+	            transform: translateX(-40rpx) translateY(-50rpx) scale(1);
+	    opacity: 1;
+}
+95% {
+	    -webkit-transform: translateX(-50rpx) translateY(-100rpx) scale(1);
+	            transform: translateX(-50rpx) translateY(-100rpx) scale(1);
+	    opacity: 0;
+}
+}
+.zwyPortrait{
+	position: relative;
+	--color:#ff0081;
+}
+.zwyPortrait::after,.zwyPortrait::before{
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	box-sizing: border-box;
+	border: 1rpx solid var(--color);
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+.zwyPortrait::after{
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+	-webkit-animation:zwyPortrait 0.7s linear infinite ;
+	        animation:zwyPortrait 0.7s linear infinite ;
+}
+@-webkit-keyframes zwyPortrait{
+0%,100%{
+	    -webkit-transform: scale(1);
+	            transform: scale(1);
+	    opacity: 0;
+}
+1% {
+	    -webkit-transform: scale(1);
+	            transform: scale(1);
+		opacity: 1;
+}
+95% {
+	    -webkit-transform: scale(1.3);
+	            transform: scale(1.3);
+	    opacity: 0;
+}
+}
+@keyframes zwyPortrait{
+0%,100%{
+	    -webkit-transform: scale(1);
+	            transform: scale(1);
+	    opacity: 0;
+}
+1% {
+	    -webkit-transform: scale(1);
+	            transform: scale(1);
+		opacity: 1;
+}
+95% {
+	    -webkit-transform: scale(1.3);
+	            transform: scale(1.3);
+	    opacity: 0;
+}
+}
+@-webkit-keyframes zwyBeat {
+0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+50% {
+		-webkit-transform: scale(0.8);
+		        transform: scale(0.8);
+}
+100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+}
+@keyframes zwyBeat {
+0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+50% {
+		-webkit-transform: scale(0.8);
+		        transform: scale(0.8);
+}
+100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+}
+}
+.zwyBeat {
+	-webkit-animation: zwyBeat 0.7s linear infinite;
+	        animation: zwyBeat 0.7s linear infinite;
+}
+.comm-content {
+		width: 100%;
+		height: 100%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		        flex-direction: column;
+}
+.comm-center{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+}
 
